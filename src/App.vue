@@ -1,5 +1,11 @@
 <template>
   <div id="app"> 
+
+    <div class="container-fluid">
+    <NewsSection id="news"></NewsSection>
+    </div>
+
+
     <div class="container-fluid ">
       <div class="row justify-content-center mb-5">
         <div class="col mt-5" v-for="(item, index) of team" :key= "index">
@@ -12,11 +18,13 @@
 
 <script>
 import TeamCard from './components/TeamCard.vue';
+import NewsSection from './components/NewsSection.vue';
 
 export default {
   name: 'App',
   components:{
-    TeamCard
+    TeamCard,
+    NewsSection
   },
   data(){
     return {
